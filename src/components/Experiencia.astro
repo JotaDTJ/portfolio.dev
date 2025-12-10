@@ -1,0 +1,39 @@
+---
+import ExperienciaItem from "./ExperienciaItem.astro";
+const EXPERIENCE = [
+    {
+        title:"Burger King - Crew Member" ,
+        description:"Trabajo a tiempo parcial compaginado con los estudios y el aprendizaje autodidacta para poder tener algo de autosuficiencia  " ,
+        link: "", 
+        date:"Actualidad"
+
+    },
+    {
+        title:"IES San Clemente - Desarrollo de Aplicaciones Web" ,
+        description:"Grado superior en desarrollo de aplicaciones web. Semipresencial en Santiago de compostela" ,
+        link: "", 
+        date:"2022"
+
+    },
+    {
+        title:"Universidade da Coruña - Grado en ingenieria informatica" ,
+        description:"Estudios no acabados en ingenieria informatica en la udc" ,
+        link: "", 
+        date:"2021"
+
+    }
+];
+---
+
+
+<ol class="relative border-s border-default ml-2">
+    {
+    EXPERIENCE.map(experiencia => (
+        <li class="mb-10 ms-4">
+            <ExperienciaItem {...experiencia}/>
+        </li>
+        )
+    )
+    }                  
+</ol>
+
